@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Pet Palace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body id="signup-page">
+
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h2>Create Your Account</h2>
+            
+            <form id="signup-form">
+                <p>
+                    <label for="user">Full Name</label>
+                    <input type="text" id="user" placeholder="Rence A. Escala" required>
+                </p>
+                <p>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="escala03@email.com" required>
+                </p>
+                <p>
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" placeholder="Enter secure password" required>
+                </p>
+
+                <p class="checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions</label>
+                </p>
+
+                <button type="submit" class="btn-auth">Sign Up</button>
+            </form>
+            
+            <p class="auth-footer">
+                Already have an account? <a href="login.html">Log In</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+        const signupForm = document.getElementById('signup-form');
+        if (signupForm) {
+            signupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('user').value;
+                
+                // Simulating successful signup
+                alert("Account created successfully for " + name + "!");
+                window.location.href = 'account.html';
+            });
+        }
+    </script>
+
+</body>
+</html>

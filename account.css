@@ -1,0 +1,115 @@
+
+:root {
+    --primary-purple: #4b0082;
+    --light-lavender: #f8f0fc;
+    --border-purple: #e1bee7;
+    --gold-name: #ffd700;
+}
+
+/* IMPORTANT: Tanggalin ang default space ng browser sa gilid */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-lavender);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Iwasan ang side-scrolling */
+}
+
+#account-page {
+    width: 100%;
+}
+
+/* --- HEADER FIX (Full Width & No Gaps) --- */
+.account-header {
+    background-color: white;
+    width: 100%; /* Saktong dulo sa dulo */
+    padding: 50px 0; /* Vertical padding lang */
+    text-align: center;
+    border-bottom: 2px solid var(--border-purple);
+    box-shadow: 0 4px 15px rgba(75, 0, 130, 0.05);
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Space bago ang Purchase History */
+}
+
+.back-nav {
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: var(--primary-purple);
+    font-weight: 600;
+}
+
+.account-header h2 {
+    font-size: 2.2rem;
+    color: var(--primary-purple);
+    margin: 20px 10px;
+}
+
+#user-greeting {
+    color: var(--gold-name);
+}
+
+/* --- BUTTONS SPACING FIX --- */
+.account-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column; /* Stacked vertical */
+    align-items: center;
+    gap: 15px; /* Eto ang maghihiwalay sa buttons */
+}
+
+.account-nav li {
+    width: 80%; /* Pantay na haba */
+    max-width: 250px;
+}
+
+.account-nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--primary-purple);
+    padding: 14px 0;
+    border: 1.5px solid var(--primary-purple);
+    border-radius: 50px;
+    font-weight: 600;
+    background: white;
+    transition: 0.3s;
+}
+
+.account-nav a:hover {
+    background: var(--primary-purple);
+    color: white;
+}
+
+/* --- PURCHASE HISTORY AREA --- */
+.account-main {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--primary-purple);
+    margin-bottom: 30px;
+    border-left: 6px solid var(--primary-purple);
+    padding-left: 15px;
+}
+
+.order-expansion {
+    background: white;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border-purple);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.order-expansion summary {
+    padding: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}

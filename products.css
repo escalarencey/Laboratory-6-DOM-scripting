@@ -1,0 +1,82 @@
+/* =====================================================
+   GLOBAL RESET (Para walang puti sa gilid)
+   ===================================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =====================================================
+   FULL WIDTH HEADER
+   ===================================================== */
+header {
+    width: 100%;             /* Abot sa dulo ng screen */
+    background-color: var(--white);
+    border-bottom: 2px solid var(--border-purple);
+    box-shadow: 0 4px 12px rgba(75, 0, 130, 0.08);
+    box-sizing: border-box;
+    z-index: 1000;          /* Para laging nasa ibabaw */
+    position: relative;
+}
+
+/* Wrapper para sa content sa loob ng header */
+.header-content {
+    width: 100%;
+    max-width: 1200px;      /* Pantay sa main container mo */
+    margin: 0 auto;         /* Gitna ang content */
+    padding: 15px 20px;     /* Padding para sa mobile */
+    display: flex;
+    flex-direction: column; /* Stacked (Vertical) sa Mobile */
+    align-items: center;
+    gap: 15px;              /* Patlang sa pagitan ng logo at nav */
+    box-sizing: border-box;
+}
+
+/* Logo Section */
+.logo-area {
+    text-align: center;
+}
+
+.logo-area h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.logo-area p {
+    font-size: 0.75rem;
+    margin: 2px 0 0;
+    color: #666;
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;       /* Para hindi lumabas sa screen kung maraming links */
+    justify-content: center;
+    gap: 15px;
+}
+
+/* =====================================================
+   DESKTOP VIEW (min-width: 769px)
+   ===================================================== */
+@media (min-width: 769px) {
+    .header-content {
+        flex-direction: row;       /* Magkatabi na ang Logo at Nav */
+        justify-content: space-between; /* Logo sa kaliwa, Nav sa kanan */
+        padding: 20px;
+    }
+
+    .logo-area {
+        text-align: left;          /* Align sa kaliwa sa Desktop */
+    }
+
+    header nav ul {
+        gap: 30px;                 /* Mas malawak na patlang sa Desktop */
+    }
+}

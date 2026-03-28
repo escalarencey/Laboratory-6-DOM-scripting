@@ -1,0 +1,221 @@
+/* =====================================================
+   CHECKOUT PAGE STYLES (checkout.css) - ALL DEVICES
+   ===================================================== */
+
+:root {
+    --primary-purple: #4b0082;
+    --light-lavender: #f8f0fc;
+    --border-purple: #e1bee7;
+    --success-green: #2e8b57;
+    --dark-text: #2d004d;
+}
+
+/* Base Settings */
+body#checkout-page {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+}
+
+/* Header - Full Width */
+.checkout-header {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-purple);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(75, 0, 130, 0.05);
+}
+
+/* --- MAIN LAYOUT (Flexbox for Desktop) --- */
+.checkout-layout {
+    display: flex;
+    flex-wrap: wrap; /* Papayagan ang pag-wrap sa mobile */
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    gap: 25px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* --- LEFT SIDE: FORM (Flexible Width) --- */
+.form-container {
+    flex: 2; /* Mas malapad sa Desktop */
+    min-width: 320px; /* Minimum width para sa small screens */
+    background-color: var(--light-lavender);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border-purple);
+    box-sizing: border-box;
+}
+
+.section-title {
+    color: var(--primary-purple);
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+/* Fieldset & Legend */
+fieldset.form-group {
+    border: 1px solid var(--border-purple);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: white;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--primary-purple);
+    padding: 0 10px;
+}
+
+/* Inputs */
+.input-row {
+    margin-bottom: 15px;
+}
+
+.input-row label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.input-row input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.input-row input[type="text"]:focus {
+    border-color: var(--primary-purple);
+    outline: none;
+    background-color: #faf5ff;
+}
+
+/* Radio Options */
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* --- RIGHT SIDE: SUMMARY (Sidebar) --- */
+.summary-sidebar {
+    flex: 1; /* Mas makitid sa Desktop */
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+.summary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid var(--primary-purple);
+    box-shadow: 0 10px 25px rgba(75, 0, 130, 0.1);
+    /* Sticky effect para sa Desktop */
+    position: sticky;
+    top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.total-row {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-purple);
+    border-top: 1px solid var(--light-lavender);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.price-val::before {
+    content: "₱";
+}
+
+/* Main Place Order Button */
+.place-order-btn {
+    width: 100%;
+    background-color: var(--primary-purple);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.place-order-btn:hover {
+    background-color: #3a0066;
+    transform: scale(1.02);
+}
+
+/* =====================================================
+   RESPONSIVE ADJUSTMENTS (Mobile & Tablets)
+   ===================================================== */
+
+/* Tablets (iPad, etc.) */
+@media (max-width: 1024px) {
+    .checkout-layout {
+        gap: 20px;
+    }
+}
+
+/* Mobile Phones (iPhone, Android) */
+@media (max-width: 768px) {
+    .checkout-layout {
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .form-container, .summary-sidebar {
+        flex: none;
+        width: 100%; /* Full width sa mobile */
+    }
+
+    .summary-sidebar {
+        order: -1; /* Summary muna ang makikita bago ang mahabang form */
+        margin-bottom: 10px;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 400px) {
+    .form-container {
+        padding: 20px 15px;
+    }
+    
+    .place-order-btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}

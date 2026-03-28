@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account | Pet Palace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body id="account-page">
+
+    <header class="account-header">
+        <div class="back-nav">
+            <a href="landing.html" class="back-btn">← Back to Home</a>
+        </div>
+        
+        <h2>Welcome back, <span id="user-greeting"></span>!</h2>
+        
+        <nav class="account-nav">
+            <ul>
+                <li><a href="#history">Order History</a></li>
+                <li><a href="#profile">Profile Settings</a></li>
+                <li><a href="#wishlist">Wishlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="account-main">
+        <section id="history">
+            <h2 class="section-title">Purchase History</h2>
+            
+            <details class="order-expansion">
+                <summary>Order #PP-2026-001 (Completed)</summary>
+                
+                <div class="order-content">
+                    <ul class="order-history">
+                        <li>Pink Multi-Level Cat Tower - <span class="price">1,250.00</span></li>
+                        <li>Cat Laser Toy - <span class="price">40.00</span></li>
+                    </ul>
+
+                    <dl class="order-meta">
+                        <dt>Shipping Address</dt>
+                        <dd>Pambujan, Eastern Visayas, Philippines</dd>
+                        <dt>Payment Method</dt>
+                        <dd>PayPal (rence.escala@email.com)</dd>
+                    </dl>
+                </div>
+            </details>
+
+            <details class="order-expansion">
+                <summary>Order #PP-2025-088 (Completed)</summary>
+                <div class="order-content">
+                    <ul class="order-history">
+                        <li>Blue Dog Harness - <span class="price">280.00</span></li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pet Palace Philippines</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

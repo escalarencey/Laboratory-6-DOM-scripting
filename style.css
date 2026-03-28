@@ -1,0 +1,267 @@
+/* =====================================================
+   TASK 1: GLOBAL VARIABLES & FONTS
+   ===================================================== */
+:root {
+    --primary-color: #4B0082;
+    --accent-color: #D4AF37;
+    --bg-light: #f4f4f4;
+    --light-lavender: #f8f0fc;
+    --text-main: #333333;
+    --white: #ffffff;
+    --valid-green: #2ecc71;
+    --required-red: #e74c3c;
+    --border-purple: #e1bee7;
+}
+
+/* Task 1.1: Sans-serif for body */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    font-family: 'Poppins', 'Segoe UI', sans-serif; 
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Task 1.1: Serif for headings */
+h1, h2, h3 { 
+    font-family: 'Georgia', serif; 
+    color: var(--primary-color); 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =====================================================
+   TASK 2: INTERACTIVE STATES & NAV
+   ===================================================== */
+
+header {
+    background-color: var(--white);
+    padding: 20px;
+    border-bottom: 2px solid var(--border-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none; 
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: all 0.3s ease; 
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline; 
+}
+
+/* Button transitions */
+.btn, button {
+    background-color: var(--primary-color); 
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+    padding: 12px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease; 
+}
+
+.btn:hover, button:hover {
+    background-color: var(--accent-color); 
+    border-color: var(--accent-color);
+    color: var(--primary-color); 
+    animation: pulse 0.4s ease-in-out;
+}
+
+.btn:active, button:active {
+    transform: scale(0.95);
+}
+
+input:focus, button:focus {
+    outline: 3px solid var(--accent-color); 
+    outline-offset: 2px;
+}
+
+/* =====================================================
+   TASK 3 & 4: PRODUCT CARDS & SELECTORS
+   ===================================================== */
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: var(--white); 
+    border: 1px solid #ddd;         
+    border-radius: 15px;           
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Alternating backgrounds */
+.product-card:nth-child(odd) { background-color: #fffdf5; }
+.product-card:nth-child(even) { background-color: #f9f5ff; }
+
+.price::before {
+    content: "₱";
+    font-weight: bold;
+}
+
+/* =====================================================
+   LABORATORY 6: DYNAMIC & FORM STYLES
+   ===================================================== */
+
+/* Task 4.1: Empty state */
+section:empty::after {
+    content: "Your cart is currently empty. Start shopping!";
+    display: block;
+    padding: 50px;
+    background-color: #ffeaea;
+    border: 2px dashed var(--required-red);
+    color: var(--required-red);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Form validation */
+input:required {
+    border-left: 5px solid var(--required-red);
+}
+
+input:valid {
+    border: 2px solid var(--valid-green);
+    background-color: #f0fff0;
+}
+
+.error {
+    border: 2px solid var(--required-red) !important;
+    background-color: #fff0f0 !important;
+}
+
+/* Task 6: Animation Feedback */
+.fade-in {
+    animation: successPulse 0.6s ease-in-out;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 rgba(75, 0, 130, 0); }
+    50% { 
+        transform: scale(1.05); 
+        box-shadow: 0 0 20px rgba(75, 0, 130, 0.4);
+        border-color: var(--accent-color);
+    }
+    100% { transform: scale(1); box-shadow: 0 0 0 rgba(75, 0, 130, 0); }
+}
+
+/* =====================================================
+   CART & CHECKOUT LAYOUTS (MOBILE FIRST)
+   ===================================================== */
+
+.main-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.cart-items li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid var(--border-purple);
+    gap: 10px;
+}
+
+.order-history li::marker {
+    color: var(--primary-color);
+    content: "🐾 ";
+}
+
+/* Checkout Layout */
+.checkout-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================== */
+
+/* TABLET (min-width: 481px) */
+@media (min-width: 481px) {
+    header nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOP (min-width: 769px) */
+@media (min-width: 769px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 5%;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .checkout-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .form-container { flex: 2; }
+    .summary-sidebar { flex: 1; position: sticky; top: 20px; }
+}
+
+/* =====================================================
+   KEYFRAMES
+   ===================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

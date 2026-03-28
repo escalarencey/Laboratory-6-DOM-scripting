@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop All Products | Pet Palace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body id="catalog-page">
+
+    <header>
+        <div class="header-content">
+            <div class="logo-area">
+                <h1>Pet Palace Catalog 🐾</h1>
+                <p>Welcome, <strong id="user-greeting">Rence A. Escala</strong></p>
+            </div>
+            
+            <nav class="catalog-nav">
+                <ul>
+                    <li><a href="landing.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                    <li><a href="account.html">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="catalog-main">
+        <aside class="filter-sidebar">
+            <h2>Filters</h2>
+            <form id="filter-form">
+                <fieldset>
+                    <legend>Pet Type</legend>
+                    <label><input type="checkbox" name="pet" value="dog"> Dogs</label><br>
+                    <label><input type="checkbox" name="pet" value="cat"> Cats</label><br>
+                    <label><input type="checkbox" name="pet" value="bird"> Birds</label><br>
+                    <label><input type="checkbox" name="pet" value="fish"> Fish</label>
+                </fieldset>
+            </form>
+        </aside>
+
+        <section class="product-list">
+            <h2>Available Supplies</h2>
+
+            <article class="product-card" data-id="1">
+                <img src="harness.jpg" alt="Blue Dog Harness">
+                <h3>Blue Dog Harness</h3>
+                <p class="price">280.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=1" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="1">Add to Cart</button>
+                </div>
+            </article>
+            
+            <article class="product-card" data-id="2">
+                <img src="amber.jpg" alt="Amber Dog Harness">
+                <h3>Amber Dog Harness</h3>
+                <p class="price">350.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=2" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="2">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="3">
+                <img src="pedigree.jpg" alt="Adult Dog Food">
+                <h3>Pedigree Adult Beef</h3>
+                <p class="price">130.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=3" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="3">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="4">
+                <img src="laser.jpg" alt="Cat laser">
+                <h3>Cat Laser Toy</h3>
+                <p class="price">40.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=4" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="4">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="5">
+                <img src="kitkat.jpg" alt="Catfood">
+                <h3>KitKat Premium Food</h3>
+                <p class="price">220.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=5" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="5">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="6">
+                <img src="tower.jpg" alt="Cat Tower">
+                <h3>Multi-Level Tower</h3>
+                <p class="price">1250.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=6" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="6">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="7">
+                <img src="perch.jpg" alt="Bird Perch">
+                <h3>Natural Wood Perch</h3>
+                <p class="price">227.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=7" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="7">Add to Cart</button>
+                </div>
+            </article>
+            
+            <article class="product-card" data-id="8">
+                <img src="elixir.jpg" alt="Elixir Bird Feeds">
+                <h3>Elixir Bird Feeds</h3>
+                <p class="price">35.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=8" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="8">Add to Cart</button>
+                </div>
+            </article>
+            
+            <article class="product-card" data-id="9">
+                <img src="premium.jpg" alt="Premium Bird Feeds">
+                <h3>Premium Bird Mix</h3>
+                <p class="price">37.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=9" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="9">Add to Cart</button>
+                </div>
+            </article>
+            
+            <article class="product-card" data-id="10">
+                <img src="gardman.jpg" alt="Gardman Bird Feeds">
+                <h3>Gardman Bird Feeds</h3>
+                <p class="price">45.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=10" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="10">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="11">
+                <img src="pellets.jpg" alt="Fish Pellets">
+                <h3>Fish Pellets</h3>
+                <p class="price">69.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=11" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="11">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="12">
+                <img src="flakes.jpg" alt="Fish Flakes">
+                <h3>Fish Flakes</h3>
+                <p class="price">59.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=12" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="12">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-id="13">
+                <img src="filter.jpg" alt="Fish Tank Filter">
+                <h3>Quiet-Flow Filter</h3>
+                <p class="price">268.00</p>
+                <div class="card-buttons">
+                    <a href="detail.html?id=13" class="btn">View Details</a>
+                    <button class="add-to-cart-btn btn" data-id="13">Add to Cart</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pet Palace Philippines</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

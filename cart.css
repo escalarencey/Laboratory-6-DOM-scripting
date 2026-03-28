@@ -1,0 +1,189 @@
+
+
+:root {
+    --primary-purple: #4b0082;
+    --light-lavender: #f8f0fc;
+    --border-purple: #e1bee7;
+    --dark-text: #2d004d;
+    --accent-gold: #ffd700;
+}
+
+/* Base Settings */
+body#cart-page {
+    background-color: var(--light-lavender);
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    overflow-x: hidden; /* Iwas sa side-scroll */
+}
+
+/* --- HEADER (Responsive) --- */
+header {
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--border-purple);
+    box-shadow: 0 4px 10px rgba(75, 0, 130, 0.05);
+}
+
+header h1 {
+    color: var(--primary-purple);
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--primary-purple);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+/* --- MAIN CONTAINER --- */
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+    box-sizing: border-box; /* Mahalaga para sa mobile */
+}
+
+.cart-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-purple);
+}
+
+.cart-container h2 {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: var(--primary-purple);
+    border-left: 5px solid var(--primary-purple);
+    padding-left: 15px;
+}
+
+/* --- CART ITEMS LIST --- */
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Flexbox para sa item row */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 15px;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* --- SUMMARY SECTION --- */
+.cart-summary {
+    margin-top: 30px;
+    text-align: right;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-purple);
+    margin-bottom: 20px;
+}
+
+.summary-row.total h3 {
+    font-size: 1.6rem;
+    color: var(--primary-purple);
+    margin-bottom: 25px;
+}
+
+/* --- ACTION BUTTON --- */
+.cart-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-actions .btn {
+    display: inline-block;
+    background-color: var(--primary-purple);
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cart-actions .btn:hover {
+    background-color: #3a0066;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 0, 130, 0.2);
+}
+
+/* =====================================================
+   RESPONSIVE QUERIES (Tablets & Mobile)
+   ===================================================== */
+
+/* Tablets (iPad, etc.) */
+@media (max-width: 768px) {
+    .main-container {
+        margin: 20px auto;
+    }
+    
+    .cart-container {
+        padding: 20px;
+    }
+}
+
+/* Mobile Phones (iPhone, Android) */
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .cart-item {
+        flex-direction: column; /* Stack details vertically on small phones */
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .cart-summary {
+        text-align: center;
+    }
+
+    .cart-actions {
+        justify-content: center;
+    }
+
+    .cart-actions .btn {
+        width: 100%; /* Full width button sa mobile */
+        padding: 15px 20px;
+    }
+
+    .summary-row.total h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+    font-size: 0.8rem;
+}

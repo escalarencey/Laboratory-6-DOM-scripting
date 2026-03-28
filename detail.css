@@ -1,0 +1,131 @@
+#detail-page {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Layout */
+.detail-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Product View Wrapper */
+.product-detail-view {
+    display: flex;
+    flex-wrap: wrap; /* Para mag-stack sa mobile */
+    gap: 40px;
+    align-items: center;
+}
+
+/* Image Side */
+.product-image-large {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.product-image-large img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-image-large img:hover {
+    transform: scale(1.02); /* Subtle zoom effect */
+}
+
+/* Info Side */
+.product-info-sheet {
+    flex: 1.2;
+    min-width: 300px;
+}
+
+#detail-name {
+    font-size: 2.5rem;
+    color: #4b0082; /* Primary Indigo */
+    margin-bottom: 10px;
+}
+
+.price-large {
+    font-size: 1.8rem;
+    color: #2e8b57; /* Sea Green for price */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Description Section */
+.product-description {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.product-description h3 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.product-description p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Action Button */
+.detail-actions {
+    margin-top: 20px;
+}
+
+.btn-large {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-large:hover {
+    background-color: #3a0066;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn-large:active {
+    transform: translateY(-1px);
+}
+
+/* Breadcrumb or Back Button */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #4b0082;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #ffd700;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-detail-view {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #detail-name {
+        font-size: 2rem;
+    }
+}

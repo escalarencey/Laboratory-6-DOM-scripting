@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Pet Palace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body id="checkout-page">
+
+    <header class="checkout-header">
+        <div class="header-content">
+            <h1>Pet Palace Checkout 🐾</h1>
+            <p>Order by: <strong>Rence A. Escala</strong></p>
+            <nav>
+                <a href="cart.html" class="back-link">← Back to Cart</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="checkout-layout">
+
+        <section class="form-container">
+            <h2 class="section-title">Shipping & Payment</h2>
+
+            <form id="checkout-form" action="confirmation.html" method="GET">
+                <fieldset class="form-group">
+                    <legend>Shipping Address</legend>
+                    <div class="input-row">
+                        <label for="fname">Full Name</label>
+                        <input type="text" id="fname" name="fullname" placeholder="Rence A. Escala" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="street">Street Address</label>
+                        <input type="text" id="street" name="address" placeholder="123 Royal Lane" required>
+                    </div>
+                    <div class="input-row">
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" name="zipcode" placeholder="6415" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Payment Method</legend>
+                    <div class="radio-options">
+                        <label class="radio-label">
+                            <input type="radio" name="pay" value="card" checked> Credit Card
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="pay" value="paypal"> PayPal
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <aside class="summary-sidebar">
+            <div class="summary-card">
+                <h3>Order Summary</h3>
+                
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Items Total:</span>
+                        <span class="price-val" id="checkout-subtotal">0.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Shipping Fee:</span>
+                        <span class="price-val" id="checkout-shipping">0.00</span>
+                    </div>
+
+                    <hr class="summary-divider">
+
+                    <div class="summary-row total-row">
+                        <strong>Final Total:</strong>
+                        <strong class="price-val total-amt" id="checkout-total">0.00</strong>
+                    </div>
+                </div>
+
+                <button type="submit" form="checkout-form" class="place-order-btn" id="place-order-btn">
+                    Place Order
+                </button>
+                <p id="empty-msg" style="color: #ff4757; font-size: 0.85rem; text-align: center; margin-top: 15px; display: none; font-weight: bold;">
+                    ⚠️ Your cart is empty! Redirecting...
+                </p>
+            </div>
+        </aside>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
